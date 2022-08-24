@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="627d9443-2418-40e6-9690-d05d8818207f" Name="标记雷达" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="false" Name="锁链2" Id="eadd80c5-1432-430d-97e4-8b918548a6d8" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8080/command" JsonPayloadExpression="/wmark 2 &lt;止步2&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+            <Condition Enabled="true" Grouping="And" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="eadd80c5-1432-430d-97e4-8b918548a6d8" TriggerForce="regexp,conditions" ActionType="Trigger" ExecutionDelayExpression="500">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="false" Name="锁链3" Id="660ceb00-7ae0-4faf-b11e-8a2d51cc4880" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8080/command" JsonPayloadExpression="/wmark 3 &lt;止步3&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+            <Condition Enabled="true" Grouping="And" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="660ceb00-7ae0-4faf-b11e-8a2d51cc4880" TriggerForce="regexp,conditions" ActionType="Trigger" ExecutionDelayExpression="500">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="false" Name="锁链1" Id="39de196d-83ba-4bde-b5fd-a050e812fc91" RegularExpression="">
+        <Actions>
+          <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:8080/command" JsonPayloadExpression="/wmark 1 &lt;止步1&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="GenericJson">
+            <Condition Enabled="true" Grouping="And" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="39de196d-83ba-4bde-b5fd-a050e812fc91" TriggerForce="regexp,conditions" ActionType="Trigger" ExecutionDelayExpression="500">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="关闭雷达" Id="4782c74d-f706-44c7-ab32-287c4f3f851e" RegularExpression="关闭雷达">
+        <Actions>
+          <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="39de196d-83ba-4bde-b5fd-a050e812fc91" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="eadd80c5-1432-430d-97e4-8b918548a6d8" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="DisableTrigger" TriggerId="660ceb00-7ae0-4faf-b11e-8a2d51cc4880" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="启动雷达" Id="54fb1e43-2835-4cbd-9fcd-47c97cffdd14" RegularExpression="启动雷达">
+        <Actions>
+          <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="39de196d-83ba-4bde-b5fd-a050e812fc91" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="eadd80c5-1432-430d-97e4-8b918548a6d8" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerOp="EnableTrigger" TriggerId="660ceb00-7ae0-4faf-b11e-8a2d51cc4880" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="4" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="39de196d-83ba-4bde-b5fd-a050e812fc91" TriggerForce="regexp,conditions" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="eadd80c5-1432-430d-97e4-8b918548a6d8" TriggerForce="regexp,conditions" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="6" OBSEndPoint="" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="eadd80c5-1432-430d-97e4-8b918548a6d8" TriggerForce="regexp,conditions" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="双击打开看描述↘" Id="33ae3bf6-84c3-43a9-af2a-4b14d96f2b6a" RegularExpression="" Description="做个宏&#xD;&#xA;/e 启动雷达&#xD;&#xA;&#xD;&#xA;/e 关闭雷达&#xD;&#xA;&#xD;&#xA;使用前请给需要的目标标上锁链123">
+        <Actions />
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
